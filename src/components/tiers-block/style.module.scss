@@ -1,0 +1,66 @@
+$gold: #e4ae33;
+$black: #333333;
+$white: #fefefe;
+
+.tiersWrap{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100vh;
+  display: flex;
+  user-select: none;
+}
+
+.tiersBlock {
+  background: $black;
+  width: 250px;
+  height: 100%;
+  overflow-y: auto;
+  border-right: 2px solid $gold;
+  // box-shadow: 0px 0px 5px 1px $gold;
+  user-select: none;
+  max-width: 250px;
+  transition: max-width .5s ease;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+.hiddenTiersBlock {
+  max-width: 0px;
+}
+
+.toggleIconBlock{
+  background: #333333;
+  margin: auto;
+  border-radius: 0px 35px 35px 0px;
+  border: 2px solid $gold;
+  // box-shadow: 0px 0px 5px 1px $gold;
+  border-left: 0px;
+  user-select: none;
+  display: flex;
+  height: 100px;
+
+  position: absolute;
+  left: 250px;
+  align-self: center;
+  transition: left 500ms;
+}
+
+.toggleIconBlockClosed {
+  left: 0px;
+}
+
+.toggleIcon{
+  color: $gold;
+  font-size: 48px;
+  transform: rotate(0deg);
+  transition: all 200ms;
+  cursor: pointer;
+  margin: auto;
+}
+
+.expandIconClosed {
+  transform: rotate(180deg);
+}
